@@ -7,4 +7,6 @@
 
 #### To-do list:
  - get the site to read the log file
- - present it nicely
+ - Make a web server
+    - Get the design
+    - Add a backend (database parsing the JSON files)
