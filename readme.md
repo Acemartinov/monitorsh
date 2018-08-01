@@ -2,7 +2,7 @@
 ### The ultimate analytics tool for your Thinkpad
 
 #### Already done list:
- - Get the bash script to output JSON files
+ - Get the bash script to output JSON-ish files
 
 
 #### To-do list:
