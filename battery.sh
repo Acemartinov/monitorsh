@@ -1,13 +1,13 @@
  #!/bin/bash
 
-# Makes a timestamp
+# Makes a timestamp so that the whole thing is coherent or something
 timestamp() {
  echo -e "{\n\"time\":" \"$(date +"%T")\"
 }
 while true
 do
-
     timestamp # >> `date +"%d-%m-%Y"`.log
+        # First case, if the battery is present in the laptop
         if [[ $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "present") == *"yes" ]]
             then 
             
@@ -16,7 +16,11 @@ do
 		    echo -n '"state":'
             upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/state/ {sub($2, "\"&\"") ;print ($2)}' # >> `date +"%d-%m-%Y"`.log
 		    echo -e "}"
-    sleep 30
+        sleep 30
+    else
+            echo -n '"state":'
+            echo '"n/a"'
+        sleep 30
     fi
 done
 
