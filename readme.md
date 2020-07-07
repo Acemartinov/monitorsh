@@ -1,8 +1,6 @@
 # Monitor.sh
 ### The ultimate analytics tool for your Thinkpad
 
-holy fuck this is discontinued probably useless unless you have aspergers like me, og plans below vvv
-
 #### Already done list:
  - Get the bash script to output JSON-ish files
 
